@@ -29,6 +29,7 @@ Start by downloading the course materials.  This can be accomplished either thro
 
 ```
 $ git clone https://github.com/pdoshi-pivotal/pks-workshop
+```
 
 ## Course Materials
 
