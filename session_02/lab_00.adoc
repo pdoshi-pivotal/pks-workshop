@@ -55,8 +55,51 @@ uaac member add pks.clusters.admin pksadmin
 uaac member add pks.clusters.manage pksmanager
 ----
 
+Now log in as *pksadmin* using the PKS CLI. 
 
+----
+pks login -a https://api.pks.pcf4labs.com -k -u pksadmin
 
+Password: ********
+API Endpoint: https://api.pks.pcf4labs.com
+User: pksadmin
+----
+
+Now list all clusters. The pksadmin should see all the clusters created in your environment. In my example, I have one existing cluster and it is shown below.
+
+----
+pks clusters
+
+Name          Plan Name  UUID                                  Status     Action
+demo-cluster  small      8f9ca15e-a16a-44d2-95bb-d53a8c0c2915  succeeded  CREATE
+----
+
+Let's do a pks logout and then log in as pksmanager and see all the clusters.
+
+----
+pks logout
+
+You have successfully logged out
+----
+
+Now, let's log in as pksmanager.
+
+----
+pks login -a https://api.pks.pcf4labs.com -k -u pksmanager
+
+Password: ********
+API Endpoint: https://api.pks.pcf4labs.com
+User: pksmanager
+
+----
+
+Let's list all the clusters that pksmanager can see.
+
+----
+pks clusters
+
+Name  Plan Name  UUID  Status  Action
+----
 
 
 
