@@ -50,7 +50,7 @@ user account successfully added
 
 Create Cluster Manage user:
 ----
-uaac user add pksclustermanager --emails pksclustermanager@example.com  -p password
+*uaac user add pksclustermanager --emails pksclustermanager@example.com  -p password*
 
 user account successfully added
 ----
