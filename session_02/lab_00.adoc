@@ -110,9 +110,9 @@ Now we will create a new PKS cluster in GCP and we will be following the steps d
 
 . Create PKS cluster following steps https://docs.pivotal.io/runtimes/pks/1-4/create-cluster.html#create
 
- ----
+ 
  pks create-cluster workshop-cluster --external-hostname 104.154.114.213 --plan small
- ----
+ 
 
 . Update GCP loadbalancer backend configuration with PKS cluster's master IP by following steps https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html#backend
 
