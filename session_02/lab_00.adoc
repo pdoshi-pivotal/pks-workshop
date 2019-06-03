@@ -37,21 +37,23 @@ Target: https://api.pks.pcf4labs.com:8443
 Context: admin, from client admin
 ----
 
-== Create custom UAA users
+== Create custom UAA users and map to PKS groups
 
 . Run the below command to create the two custom users that will have PKS cluster admin and PKS cluster manager user role. You should see the success message *'user account successfully added'* after user account is created.
 
 Create *Cluster Admin* user:
 ----
 uaac user add pksclusteradmin --emails pksclusteradmin@example.com  -p password
-
 ----
 
 Create *Cluster Manager* user:
 ----
 uaac user add pksclustermanager --emails pksclustermanager@example.com  -p password
+----
 
-user account successfully added
+. Add these users to PKS cluster groups:
+----
+uaac member add pks.clusters.admin alana
 ----
 
 
