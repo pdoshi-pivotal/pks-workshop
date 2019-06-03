@@ -39,18 +39,17 @@ Context: admin, from client admin
 
 == Create custom UAA users
 
-. Run the below command to create the two custom users that will have PKS cluster admin and PKS cluster manager user role. You should see a success message after user account is created.
+. Run the below command to create the two custom users that will have PKS cluster admin and PKS cluster manager user role. You should see the success message *'user account successfully added'* after user account is created.
 
-Create Cluster Admin user:
+Create *Cluster Admin* user:
 ----
 uaac user add pksclusteradmin --emails pksclusteradmin@example.com  -p password
 
-user account successfully added
 ----
 
-Create *Cluster Manage* user:
+Create *Cluster Manager* user:
 ----
-*uaac user add pksclustermanager --emails pksclustermanager@example.com  -p password*
+uaac user add pksclustermanager --emails pksclustermanager@example.com  -p password
 
 user account successfully added
 ----
