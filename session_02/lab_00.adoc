@@ -101,6 +101,13 @@ pks clusters
 Name  Plan Name  UUID  Status  Action
 ----
 
+As you can see, the pksmanager cannot see the existing clusters as it was not created by the pksmanager user. The pksmanager user can only see the clusters they have access to.
 
+== Cluster Creation
+Now we will create a new PKS cluster in GCP and we will be following the steps detailed here: https://docs.pivotal.io/runtimes/pks/1-4/create-cluster.html#cluster-access-general
+
+. Create GCP Loadbalancer following steps https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html
+
+. 
 
 
