@@ -48,4 +48,8 @@ spec:
     tier: frontend
 ----
 
-When a service of type 'LoadBalancer' is created in public cloud environment, it will create a loadbalancer with a public IP and the app is accessed through that IP. 
+When a service of type 'LoadBalancer' is created in public cloud environment, it will create a loadbalancer with a public IP and the frontend app is accessed through that IP. 
+
+Accessing the app using that public IP will display the guestbook frontend application.
+
+
