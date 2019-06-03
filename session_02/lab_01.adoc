@@ -1,1 +1,30 @@
 == Cluster Access by Cluster Manager, Create Namespace and Role Binding
+
+In this lab we will cover cluster access by cluster manager, create namespaces and role binding for accessing the namespaces.
+
+==Cluster Access
+
+. In the newly created cluster or existing cluster, log in as the cluster manager (or admin in case of existing cluster). The steps are the same irrespective of the role. 
+
+----
+pks login -a https://api.pks.pcf4labs.com -u parag -k
+
+Password: ********
+API Endpoint: https://api.pks.pcf4labs.com
+User: parag
+----
+
+. Now we will run the get-credentials command so that this user can get the credentials to access the cluster. The credentials and cluster info comes as a config file that is created or appended by the get-credentials command.
+
+----
+pks get-credentials workshop-cluster
+
+Fetching credentials for cluster workshop-cluster.
+Password: ********
+Context set for cluster workshop-cluster.
+
+You can now switch between clusters by using:
+$kubectl config use-context <cluster-name>
+----
+
+
