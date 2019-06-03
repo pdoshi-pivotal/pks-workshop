@@ -2,7 +2,7 @@
 
 In this lab we will cover cluster access by cluster manager, create namespaces and role binding for accessing the namespaces.
 
-==Cluster Access
+== Cluster Access
 
 . In the newly created cluster or existing cluster, log in as the cluster manager (or admin in case of existing cluster). The steps are the same irrespective of the role. 
 
@@ -27,4 +27,10 @@ You can now switch between clusters by using:
 $kubectl config use-context <cluster-name>
 ----
 
+== Create custom developer group, k8s namespaces and role binding
 
+Now that the cluster manager (or admin) has PKS cluster access, for the purpose of this workshop, we will create a UAA group. This will simulate group of developers that can access this cluster. In reality, there would be either LDAP, SAML or SSO integration in place that will be mapped to UAA group.
+
+----
+uaac 
+----
