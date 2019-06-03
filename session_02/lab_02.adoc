@@ -1,1 +1,17 @@
-Lab 2 content here.
+== Cluster Access by developer & Deploying Sample App
+
+Now we will log in as the *dev1* developer and get a kubeconfig file specific to the developer role that we mapped in the previous lab.
+
+== Get-kubeconfig for developer
+
+Run the below command to get the kubeconfig for the specific developer:
+
+----
+pks get-kubeconfig workshop-cluster -u dev1 -p password -a https://api.pks.pcf4labs.com -k
+
+Fetching kubeconfig for cluster workshop-cluster and user dev1.
+You can now use the kubeconfig for user dev1:
+$kubectl config use-context workshop-cluster
+----
+
+Run some kubectl command against the namespace to ensure that the developer can access it
