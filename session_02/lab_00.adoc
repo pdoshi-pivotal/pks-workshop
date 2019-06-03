@@ -3,4 +3,5 @@
 
 Ensure that UAA is enabled as an OIDC provider in Ops Manager -> Enterprise PKS tile. See screenshot below.
 
++
 image::../../common/images/enable_uaa_oidc_provider.png[]  
