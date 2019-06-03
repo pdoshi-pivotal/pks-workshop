@@ -24,4 +24,10 @@ You should see a response similar to this one:
 Target: https://api.pks.pcf4labs.com:8443
 Context: admin, from client admin
 ```
+. Now, we will get an access token for the 'admin' user so that we can create custom UAA groups and UAA users (cluster admin, cluster managers and developers). You will need the 'admin' client secret for retrieving the access token. You can find the client secret in Ops Manager -> Enterprise PKS -> Credentials -> Pks Uaa Management Admin Client. (See screenshot below).
+
+image::../common/images/uaa-mgmt-admin-client.png[]
+
+
+
 
