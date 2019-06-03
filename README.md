@@ -8,7 +8,6 @@ Workshop for different PKS features
 
 Time | Session
 ---- | -------
-
 2:00 PM - 2:30 PM | Session 1: _Introduction to PKS & K8s Primitives_
 2:30 PM - 2:45 PM | Session 2: _Identity and Role Based Access Management for Different PKS Personas_
 2:45 PM - 3:15 PM | Lab 0: _OIDC-UAA Integration, _Accessing PKS environment, Using PKS CLI, Cluster Creation_ 
