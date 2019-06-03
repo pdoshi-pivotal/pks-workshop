@@ -54,8 +54,7 @@ If you look in the GCP load balancer view, you will see that a load balancer is 
 
 image::../common/images/guestbook-lb.png[]
 
-
-[%hardbreaks]
++
 Accessing the app using that public IP will display the guestbook frontend application.
 
 image::../common/images/guestbook-app.png[] 
