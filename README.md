@@ -36,13 +36,13 @@ $ git clone https://github.com/pdoshi-pivotal/pks-workshop
 #### Session 1 [(Slides)](session_01/Session_1_Intro_to_PKS_and_k8s.pdf): _Introduction to PKS & K8s Primitives_
 
 #### Session 2 [(Slides)](session_02/Session_2_RBAC_PKS_Personas.pdf): _RBAC for Different Personas_
-  - [Lab 0 - OIDC-UAA Integration, Accessing PKS environment, Using PKS CLI, Cluster Creation](session_02/lab_00/lab_00.adoc)
-  - [Lab 1 - Creating Namespaces, and Developer Role Binding](session_02/lab_01/lab_01.adoc)
-  - [Lab 2 - Cluster Access & Deploying Sample App](session_02/lab_02/lab02.adoc)
+  - [Lab 0 - OIDC-UAA Integration, Accessing PKS environment, Using PKS CLI, Cluster Creation](session_02/lab_00.adoc)
+  - [Lab 1 - Creating Namespaces, and Developer Role Binding](session_02/lab_01.adoc)
+  - [Lab 2 - Cluster Access & Deploying Sample App](session_02/lab02.adoc)
 
 #### Session 3 [(Slides)](session_03/Session_3_k8s_Services_Ingress.pdf): _Application Access using k8s Services and Ingress Controllers_
-  - [Lab 3 - Deploying Apps using k8s Services, Creating Nginx Ingress Controller](session_03/lab_03/lab_03.adoc)
+  - [Lab 3 - Deploying Apps using k8s Services, Creating Nginx Ingress Controller](session_03/lab_03.adoc)
  
  #### Session 4 [(Slides)](session_04/Session_4_PKS_HA_Health_Monitoring.pdf): _PKS HA and Health Monitoring_
-  - [Lab 4 - Cluster Monitoring Using Prometheus](session_04/lab_04/lab_04.adoc)
+  - [Lab 4 - Cluster Monitoring Using Prometheus](session_04/lab_04.adoc)
  
