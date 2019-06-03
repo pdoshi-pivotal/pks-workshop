@@ -52,4 +52,6 @@ When a service of type 'LoadBalancer' is created in public cloud environment, it
 
 Accessing the app using that public IP will display the guestbook frontend application.
 
+image::../common/images/guestbook-app.png[] 
+
 
