@@ -12,4 +12,16 @@ This lab is configured to use UAA as the identity provider. This can also work w
 
 image::../common/images/opsman-ssh-gcp.png[]  
 
+. Target your PKS UAA API endpoint with the following command. Replace the api endpoint with your PKS installation's PKS API endpoint.
+
+```
+uaac target https://api.pks.pcf4labs.com:8443 --ca-cert /var/tempest/workspaces/default/root_ca_certificate
+```
+
+You should see a response similar to this one:
+
+```
+Target: https://api.pks.pcf4labs.com:8443
+Context: admin, from client admin
+```
 
