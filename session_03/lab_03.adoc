@@ -50,6 +50,10 @@ spec:
 
 When a service of type 'LoadBalancer' is created in public cloud environment, it will create a loadbalancer with a public IP and the frontend app is accessed through that IP. 
 
+If you look in the GCP load balancer view, you will see that a load balancer is created for this service.
+
+image::../common/images/guestbook-lb.png[]
+
 Accessing the app using that public IP will display the guestbook frontend application.
 
 image::../common/images/guestbook-app.png[] 
