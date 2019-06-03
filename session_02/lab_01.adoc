@@ -32,5 +32,15 @@ $kubectl config use-context <cluster-name>
 Now that the cluster manager (or admin) has PKS cluster access, for the purpose of this workshop, we will create a UAA group. This will simulate group of developers that can access this cluster. In reality, there would be either LDAP, SAML or SSO integration in place that will be mapped to UAA group.
 
 ----
-uaac 
+uaac group add workshop-cluster-namespace01
+
+  id: 28251fb1-9289-4889-9f2f-bd2a0b6dec52
+  meta
+    version: 0
+    created: 2019-06-03T21:24:12.000Z
+    lastmodified: 2019-06-03T21:24:12.000Z
+  members: 
+  schemas: urn:scim:schemas:core:1.0
+  displayname: workshop-cluster-namespace01
+  zoneid: uaa
 ----
