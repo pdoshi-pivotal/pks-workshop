@@ -38,7 +38,7 @@ $ git clone https://github.com/pdoshi-pivotal/pks-workshop
 #### Session 2 [(Slides)](session_02/Session_2_RBAC_PKS_Personas.pdf): _RBAC for Different Personas_
   - [Lab 0 - OIDC-UAA Integration, Accessing PKS environment, Using PKS CLI, Cluster Creation](session_02/lab_00.adoc)
   - [Lab 1 - Creating Namespaces, and Developer Role Binding](session_02/lab_01.adoc)
-  - [Lab 2 - Cluster Access & Deploying Sample App](session_02/lab02.adoc)
+  - [Lab 2 - Cluster Access & Deploying Sample App](session_02/lab_02.adoc)
 
 #### Session 3 [(Slides)](session_03/Session_3_k8s_Services_Ingress.pdf): _Application Access using k8s Services and Ingress Controllers_
   - [Lab 3 - Deploying Apps using k8s Services, Creating Nginx Ingress Controller](session_03/lab_03.adoc)
