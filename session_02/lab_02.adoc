@@ -14,4 +14,25 @@ You can now use the kubeconfig for user dev1:
 $kubectl config use-context workshop-cluster
 ----
 
-Run some kubectl command against the namespace to ensure that the developer can access it
+Run some kubectl command against the namespace to ensure that the developer can access it:
+
+----
+kubectl get pods -n namespace01
+No resources found.
+----
+
+Running any kubectl command that are at a cluster level will result in errors:
+
+----
+kubectl get nodes -n namespace01
+Error from server (Forbidden): nodes is forbidden: User "dev1" cannot list resource "nodes" in API group "" at the cluster scope
+----
+
+Now let's deploy a sample workload to ensure the developer has access to do so. Remember to add -n namespace01 at the end of the command as the *dev1* user only has access to that namespace.
+
+----
+$kubectl create -f nginx-example-deployment.yaml -n namespace01
+deployment "nginx-deployment" created
+----
+
+That completes this session around Cluster creation, RBAC and different PKS personas.
