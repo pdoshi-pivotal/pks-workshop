@@ -44,25 +44,25 @@ Run the below command to create the two custom users that will have PKS cluster 
 Create *Cluster Admin* and *Cluster Manager* user:
 
 ----
-uaac user add pksadmin --emails pksadmin@example.com -p password
-uaac user add pksmanager --emails pksmanager@example.com -p password
+uaac user add westpksadmin --emails westpksadmin@example.com -p password
+uaac user add westpksmanager --emails westpksmanager@example.com -p password
 ----
 
 Add these users to PKS cluster groups:
 
 ----
-uaac member add pks.clusters.admin pksadmin
-uaac member add pks.clusters.manage pksmanager
+uaac member add pks.clusters.admin westpksadmin
+uaac member add pks.clusters.manage westpksmanager
 ----
 
 Now log in as *pksadmin* using the PKS CLI. 
 
 ----
-pks login -a https://api.pks.pcf4labs.com -k -u pksadmin
+pks login -a https://api.pks.pcf4labs.com -k -u westpksadmin
 
 Password: ********
 API Endpoint: https://api.pks.pcf4labs.com
-User: pksadmin
+User: westpksadmin
 ----
 
 Now list all clusters. The pksadmin should see all the clusters created in your environment. In my example, I have one existing cluster and it is shown below.
@@ -74,7 +74,7 @@ Name          Plan Name  UUID                                  Status     Action
 demo-cluster  small      8f9ca15e-a16a-44d2-95bb-d53a8c0c2915  succeeded  CREATE
 ----
 
-Let's do a pks logout and then log in as pksmanager and see all the clusters.
+Let's do a pks logout and then log in as westpksmanager and see all the clusters.
 
 ----
 pks logout
@@ -82,14 +82,14 @@ pks logout
 You have successfully logged out
 ----
 
-Now, let's log in as pksmanager.
+Now, let's log in as westpksmanager.
 
 ----
-pks login -a https://api.pks.pcf4labs.com -k -u pksmanager
+pks login -a https://api.pks.pcf4labs.com -k -u westpksmanager
 
 Password: ********
 API Endpoint: https://api.pks.pcf4labs.com
-User: pksmanager
+User: westpksmanager
 
 ----
 
@@ -101,25 +101,25 @@ pks clusters
 Name  Plan Name  UUID  Status  Action
 ----
 
-As you can see, the pksmanager cannot see the existing clusters as it was not created by the pksmanager user. The pksmanager user can only see the clusters they have access to.
+As you can see, the westpksmanager cannot see the existing clusters as it was not created by the westpksmanager user. The westpksmanager user can only see the clusters they have access to.
 
 == Cluster Creation
 Now we will create a new PKS cluster in GCP and we will be following the steps detailed here: https://docs.pivotal.io/runtimes/pks/1-4/create-cluster.html#cluster-access-general
 
-. Create GCP Loadbalancer following steps https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html
+* Create GCP Loadbalancer following steps https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html
 
-. Create PKS cluster following steps https://docs.pivotal.io/runtimes/pks/1-4/create-cluster.html#create
+* Create PKS cluster following steps https://docs.pivotal.io/runtimes/pks/1-4/create-cluster.html#create
 
  
  pks create-cluster workshop-cluster --external-hostname 104.154.114.213 --plan small
  
 
-. Update GCP loadbalancer backend configuration with PKS cluster's master IP by following steps: https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html#backend
+* Update GCP loadbalancer backend configuration with PKS cluster's master IP by following steps: https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html#backend
 
-. Create Network tag by following these steps:
+* Create Network tag by following these steps:
 https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html#tag
 
-. Create firewall rule by using the network tag created above and following these steps:
+* Create firewall rule by using the network tag created above and following these steps:
 https://docs.pivotal.io/runtimes/pks/1-4/gcp-cluster-load-balancer.html#firewall
 
 
