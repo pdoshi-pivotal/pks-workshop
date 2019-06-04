@@ -110,7 +110,7 @@ kubectl get svc -n ingress-nginx
 You can access your timesample app by accessing `http://<EXTERNAL-IP>/timesample`. Example: `http://35.227.43.212/timesample`
 
 
-If next time you want to save yourself all those separate steps you can deploy a single yaml with all incldued:
+If next time you want to save yourself all those separate steps you can deploy a single yaml with all included:
 ```
 kubectl create -f ingress-rbac-allinone.yml
 ```
