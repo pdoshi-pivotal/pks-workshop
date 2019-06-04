@@ -17,7 +17,7 @@ Time | Session
 4:15 PM - 4:30 PM | Session 3: _Application Access using k8s Services and Ingress Controllers_
 4:30 PM - 5:00 PM | Lab 3: _Deploying Apps using k8s Services, Creating Nginx Ingress Controller_
 5:00 PM - 5:15 PM | Session 4: _PKS HA and Health Monitoring_
-5:15 PM - 5:30 PM | Lab 4: _BOSH resurrection of k8s node _
+5:15 PM - 5:30 PM | Lab 4: _BOSH resurrection of k8s node_
 5:30 PM - 6:00 PM | Wrap Up & Additional Q&A
 
 
