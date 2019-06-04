@@ -2,7 +2,7 @@
 
 Now that we can deploy a sample app, let's deploy an app that is accessible in two different ways: as a Service type 'Loadbalancer' and as a Service type 'Ingress' with an nginx ingress controller that will route the request for the app.
 
-Navigate to 'guestbook' folder and run the following command:
+* Navigate to 'guestbook' folder and run the following command:
 
 ----
 kubectl create -f guestbook-all-in-one.yaml -n namespace01
@@ -15,7 +15,7 @@ service "frontend" created
 deployment "frontend" created
 ----
 
-Run the below command to see the different services that are created for these apps:
+* Run the below command to see the different services that are created for these apps:
 
 ----
 kubectl get services -n namespace01
@@ -50,12 +50,12 @@ spec:
 
 When a service of type 'LoadBalancer' is created in public cloud environment, it will create a loadbalancer with a public IP and the frontend app is accessed through that IP. 
 
-If you look in the GCP load balancer view, you will see that a load balancer is created for this service.
+* If you look in the GCP load balancer view, you will see that a load balancer is created for this service.
 
 image::../common/images/guestbook-lb.png[]
 
 
-Accessing the app using that public IP will display the guestbook frontend application.
+* Accessing the app using that public IP will display the guestbook frontend application.
 
 image::../common/images/guestbook-app.png[] 
 
