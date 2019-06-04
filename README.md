@@ -44,5 +44,5 @@ $ git clone https://github.com/pdoshi-pivotal/pks-workshop
   - [Lab 3 - Deploying Apps using k8s Services, Creating Nginx Ingress Controller](session_03/lab_03.adoc)
  
  #### Session 4 [(Slides)](session_04/Session_4_PKS_HA_Health_Monitoring.pdf): _PKS HA and Health Monitoring_
-  - [Lab 4 - Cluster Monitoring Using Prometheus](session_04/lab_04.adoc)
+  - [Lab 4 - BOSH Resurrection of k8s node(session_04/lab_04.adoc)
  
