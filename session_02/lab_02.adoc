@@ -28,7 +28,7 @@ kubectl get nodes -n namespace01
 Error from server (Forbidden): nodes is forbidden: User "dev1" cannot list resource "nodes" in API group "" at the cluster scope
 ----
 
-Now let's deploy a sample workload to ensure the developer has access to do so. Remember to add -n namespace01 at the end of the command as the *dev1* user only has access to that namespace.
+Now let's deploy a sample workload to ensure the developer has access to do so. Remember to add -n namespace01 at the end of the command as the *dev1* user only has access to that namespace. Navigate to the *sample-app* folder and run the below command.
 
 ----
 $kubectl create -f nginx-example-deployment.yaml -n namespace01
