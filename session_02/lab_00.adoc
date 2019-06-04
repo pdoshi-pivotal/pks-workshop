@@ -55,7 +55,7 @@ uaac member add pks.clusters.admin westpksadmin
 uaac member add pks.clusters.manage westpksmanager
 ----
 
-Now log in as *pksadmin* using the PKS CLI. 
+Now log in as *westpksadmin* using the PKS CLI. 
 
 ----
 pks login -a https://api.pks.pcf4labs.com -k -u westpksadmin
@@ -65,7 +65,7 @@ API Endpoint: https://api.pks.pcf4labs.com
 User: westpksadmin
 ----
 
-Now list all clusters. The pksadmin should see all the clusters created in your environment. In my example, I have one existing cluster and it is shown below.
+Now list all clusters. The westpksadmin should see all the clusters created in your environment. In my example, I have one existing cluster and it is shown below.
 
 ----
 pks clusters
@@ -93,7 +93,7 @@ User: westpksmanager
 
 ----
 
-Let's list all the clusters that pksmanager can see.
+Let's list all the clusters that westpksmanager can see.
 
 ----
 pks clusters
