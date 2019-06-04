@@ -62,45 +62,47 @@ image::../common/images/guestbook-app.png[]
 
 ## Step by step guide to create ingress controller
 
-1. Create a namespace dedicated for all the Ingress configuration we will use
+* Create a namespace dedicated for all the Ingress configuration we will use
+
 ```
 kubectl create namespace ingress-nginx
 ```
 
-2. Create a Service Account and a Role to get access to apiserver
+* Create a Service Account and a Role to get access to apiserver
+
 ```
 kubectl create -f service-account.yml
 kubectl create -f service-account-role.yml
 ```
 
-3. Create a pod to be used as a default backend for traffic that arrives to the Ingress Controller and can't be mapped to any rule. We will also create a service for it to expose it in the cluster:
+*. Create a pod to be used as a default backend for traffic that arrives to the Ingress Controller and can't be mapped to any rule. We will also create a service for it to expose it in the cluster:
 ```
 kubectl create -f default-backend-service.yml
 kubectl create -f default-backend.yml
 ```
 
-4. Create an Ingress Controller.
+*. Create an Ingress Controller.
 We choose to use an Nginx Ingress Controller, but there are other types that can be used. We will also create a service to expose the Ingress Controller. This service requires exposure outside the cluster, so we will set `type: LoadBalancer`.
 ```
 kubectl create -f ingress-controller-service.yml
 kubectl create -f ingress-controller.yml
 ```
 
-5. Deploy a workload to test with the Ingress Controller.
+*. Deploy a workload to test with the Ingress Controller.
 We will deploy a pod with a simple timesample app and its corresponding service. Notice this service does not need to be exposed externally, the Ingress setup will route external traffic to it.
 ```
 kubectl create -f timesample-service.yml
 kubectl create -f timesample.yml
 ```
 
-6. Create an Ingress Resource
+*. Create an Ingress Resource
 We will create it with the routing rules required to drive traffic to our timesample app (`timesample-ingress.yml`). Once this resource is created, the Ingress Controller will know about it and will update its internal `nginx.conf` configuration to incorporate routing to this timesample app based on the rules defined.
 In this example we will use context paths to set the routing rule.
 ```
 kubectl create -f timesample-ingress.yml
 ```
 
-7. Test!
+*. Test!
 We finally can test everything. To do this we need the LoadBalancer IP of the Ingress Controller service. To get this run the following command and grab the `EXTERNAL-IP` of the `nginx-ingress-controller` service:
 ```
 kubectl get svc -n ingress-nginx
