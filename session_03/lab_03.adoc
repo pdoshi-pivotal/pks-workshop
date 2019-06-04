@@ -2,7 +2,7 @@
 
 Now that we can deploy a sample app, let's deploy an app that is accessible in two different ways: as a Service type 'Loadbalancer' and as a Service type 'Ingress' with an nginx ingress controller that will route the request for the app.
 
-* Navigate to 'guestbook' folder and run the following command:
+* Navigate to *guestbook* folder and run the following command:
 
 ----
 kubectl create -f guestbook-all-in-one.yaml -n namespace01
@@ -60,7 +60,7 @@ image::../common/images/guestbook-lb.png[]
 image::../common/images/guestbook-app.png[] 
 
 
-## Step by step guide to create ingress controller
+## Step by step guide to create ingress controller. Navigate to the *ingress* folder and run the below command.
 
 * Create a namespace dedicated for all the Ingress configuration we will use
 
