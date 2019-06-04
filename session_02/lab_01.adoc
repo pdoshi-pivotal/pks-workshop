@@ -7,11 +7,11 @@ In this lab we will cover cluster access by cluster manager, create namespaces a
 . In the newly created cluster or existing cluster, log in as the cluster manager (or admin in case of existing cluster). The steps are the same irrespective of the role. 
 
 ----
-pks login -a https://api.pks.pcf4labs.com -u parag -k
+pks login -a https://api.pks.pcf4labs.com -u westpksmanager -k
 
 Password: ********
 API Endpoint: https://api.pks.pcf4labs.com
-User: parag
+User: westpksmanager
 ----
 
 . Now we will run the get-credentials command so that this user can get the credentials to access the cluster. The credentials and cluster info comes as a config file that is created or appended by the get-credentials command.
